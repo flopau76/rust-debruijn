@@ -1037,19 +1037,19 @@ impl<'a, K: Kmer, D: Debug> Node<'a, K, D> {
     }
 
     /// Edges leaving the left side of the node in the format
-    //// (target_node id, incoming side of target node, whether target node has is flipped)
+    /// (target_node id, incoming side of target node, whether target node is flipped)
     pub fn l_edges(&self) -> SmallVec4<(usize, Dir, bool)> {
         self.graph.find_edges(self.node_id, Dir::Left)
     }
 
     /// Edges leaving the right side of the node in the format
-    //// (target_node id, incoming side of target node, whether target node has is flipped)
+    /// (target_node id, incoming side of target node, whether target node is flipped)
     pub fn r_edges(&self) -> SmallVec4<(usize, Dir, bool)> {
         self.graph.find_edges(self.node_id, Dir::Right)
     }
 
     /// Edges leaving the 'dir' side of the node in the format
-    //// (target_node id, incoming side of target node, whether target node has is flipped)
+    /// (target_node id, incoming side of target node, whether target node is flipped)
     pub fn edges(&self, dir: Dir) -> SmallVec4<(usize, Dir, bool)> {
         self.graph.find_edges(self.node_id, dir)
     }
