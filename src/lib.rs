@@ -772,7 +772,7 @@ where
 {
     bases: &'a D,
     kmer: K,
-    pos: usize,
+    pub pos: usize,
 }
 
 impl<'a, K: Kmer, D: Mer> Iterator for KmerIter<'a, K, D> {
@@ -803,7 +803,7 @@ where
     bases: &'a D,
     exts: Exts,
     kmer: K,
-    pos: usize,
+    pub pos: usize,
 }
 
 impl<'a, K: Kmer, D: Mer> Iterator for KmerExtsIter<'a, K, D> {
